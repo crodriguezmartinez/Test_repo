@@ -3,3 +3,11 @@ dist: xenial
 sudo: required
 script:
 - bash test.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: fsI6f0uwGtqsdVvE+OhQ34krHGi7i7MBkAM7pNIZrJhWyv2FKTGdA8Ut56Kxs/S5PtoZZUkhvtIzcwkQ9d8K7Df3TWh8UAR7kjzHeUVLDM5IkFBbQBcMs00Oj7qNRZ2CNvHmWQoi/iZTocJNztbZ/ui/Mhaty6s55IevWE9trm50towDK1wpfmG9Vw/Ia45iINCRgSSFHzUrTODVcrJThsmlIzdU1ZMotye0ir9a9ROea60cb0AJoMnpAmIevZsoVQzsnC5/h34HG6YORuapqEQHiWn4O1qz2az+zrwu5aurCqYtqjnO2hWcW81N3wQbLequh+QUAu4BPxyaq6hF4Zkfq5sA22tPFZENzO4qILaHt4yVqjQX4ERhtdKRBHBw1etE7I/394yU+HUsvb4DK3Msw/02uAvtOf2Wl0yFXfKlFuaMVHh7jT0XuNb7SPL2Xq+7YUXOEf8QfWDlXQSdUPN3FmB/QAQXFY5mCr7kq86ydBJG/jZl54Eoqklv+ARGJUZKSqL+jZrpuP3ZzVmLGjHxbs2XZRRTNd4HF0YZ5E9Ak/H7axaxzfmPpEcgnewd7JKYLb6FXjLSibmQWfJ4SgxDv+hlsX9pIieCTM606FJPzGACRx2enXXynSAf5OQhiJTbMcdR0nhq2ZKPulq4xMBonEiSda2JLaVXR47T1gw=
+  file: hello.sh
+  on:
+    repo: crodriguezmartinez/Test_repo
+    tags: true    
